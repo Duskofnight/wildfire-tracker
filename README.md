@@ -2,7 +2,7 @@
 
 A real-time, satellite-driven wildfire monitoring dashboard built with Next.js and MapLibre GL, visualizing active fire detections from NASA's FIRMS (Fire Information for Resource Management System) VIIRS satellite feed.
 
-**[Live Demo →](wildfiremonitor.vercel.app) *wildfiremonitor.vercel.app*
+[Live Demo →](www.wildfiremonitor.vercel.app) *wildfiremonitor.vercel.app*
 
 ![Status](https://img.shields.io/badge/status-active-brightgreen)
 ![Next.js](https://img.shields.io/badge/Next.js-16-black)
