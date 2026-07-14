@@ -21,6 +21,7 @@ export default function FireMap() {
   const [utcTime, setUtcTime] = useState('');
   const [cursorCoords, setCursorCoords] = useState<{ lat: number; lng: number } | null>(null);
   const [legendExpanded, setLegendExpanded] = useState(false);
+  const [statsExpanded, setStatsExpanded] = useState(false);
 
   const countUpTo = useCallback((target: number) => {
     const duration = 900;
@@ -232,7 +233,10 @@ export default function FireMap() {
 
       {!loading && (
         <>
-          <div className="hud-panel hud-stats">
+          <div
+            className={`hud-panel hud-stats ${statsExpanded ? 'expanded' : ''}`}
+            onClick={() => setStatsExpanded(prev => !prev)}
+          >
             <div className="hud-label">SATELLITE FEED · VIIRS NOAA-20</div>
             <div className="hud-count">{displayCount}</div>
             <div className="hud-sub">ACTIVE DETECTIONS</div>

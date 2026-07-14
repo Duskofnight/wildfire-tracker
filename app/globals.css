@@ -286,12 +286,27 @@ body { background: #0a0e14; }
     font-size: 11px;
   }
 
-  /* Stack stats under the header instead of pinning to a corner */
+/* Stats panel becomes a compact collapsed bar by default */
   .hud-stats {
     top: 90px;
     left: 12px;
     right: 12px;
     width: auto;
+    max-height: 40px;
+    overflow: hidden;
+    transition: max-height 0.25s ease;
+    cursor: pointer;
+  }
+
+  .hud-stats.expanded {
+    max-height: 220px;
+  }
+
+  .hud-stats .hud-label::after {
+    content: ' (tap to expand)';
+    font-size: 9px;
+    color: #6b7480;
+    letter-spacing: 0;
   }
 
   .hud-count { font-size: 22px; }
