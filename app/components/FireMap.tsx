@@ -122,10 +122,12 @@ export default function FireMap() {
       style: 'https://tiles.openfreemap.org/styles/dark',
       center: [-114.07, 51.05],
       zoom: 4,
+      attributionControl: false,
     });
     mapRef.current = map;
 
     map.addControl(new maplibregl.NavigationControl({ showCompass: false }), 'bottom-right');
+    map.addControl(new maplibregl.AttributionControl({ compact: true }), 'bottom-left');
 
     map.on('style.load', () => {
       map.setProjection({ type: 'globe' });
